@@ -7,4 +7,7 @@ class ContentsController < ApplicationController
 
   def help
   end
+
+  def contact
+  end
 end

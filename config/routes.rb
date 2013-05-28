@@ -1,7 +1,13 @@
 TeaBlog::Application.routes.draw do
-  get "contents/home"
-  get "contents/about"
-  get "contents/help"
+  # get "contents/home"
+  # get "contents/about"
+  # get "contents/help"
+  # get "contents/contact"
+
+  root :to => 'contents#home'
+  match '/about' => 'contents#about'
+  match '/help' => 'contents#help'
+  match '/contact' => 'contents#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
