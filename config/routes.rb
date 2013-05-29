@@ -1,6 +1,7 @@
 TeaBlog::Application.routes.draw do
-  get "users/new"
 
+
+  resources :users
   # get "contents/home"
   # get "contents/about"
   # get "contents/help"
