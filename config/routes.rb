@@ -1,10 +1,13 @@
 TeaBlog::Application.routes.draw do
+  get "users/new"
+
   # get "contents/home"
   # get "contents/about"
   # get "contents/help"
   # get "contents/contact"
 
   root :to => 'contents#home'
+  match '/signup' => 'users#new'
   match '/about' => 'contents#about'
   match '/help' => 'contents#help'
   match '/contact' => 'contents#contact'
