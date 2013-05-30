@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   def full_title(title)
     base_title="Teablog"
     if title.empty?
