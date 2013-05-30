@@ -1,2 +1,11 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, "主页") %>
+<div class="center hero-unit">
+  <h1>欢迎来到Teablog</h1>
+
+  <h2>
+    Ruby on Rails Tutorial的一个例子
+  </h2>
+  <%= link_to "免费注册帐号", signup_path, class: "btn btn-large btn-primary" %>
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
