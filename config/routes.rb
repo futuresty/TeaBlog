@@ -1,5 +1,6 @@
 TeaBlog::Application.routes.draw do
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
 
   #get "static_pages/home"
   #get "static_pages/help"
@@ -11,6 +12,8 @@ TeaBlog::Application.routes.draw do
   match "/about"    => "static_pages#about"
   match "/contact"  => "static_pages#contact"
   match "/signup"   => "users#new"
+  match "/signin"   => "sessions#new"
+  match "/signout"  => "sessions#destroy", via: :delete
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
